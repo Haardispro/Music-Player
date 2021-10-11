@@ -6,7 +6,7 @@ from tkinter import filedialog
 from pygame import mixer
 import pygame
 import keyboard
-
+import sys
 w = Tk()
 #w.geometry("290x200")
 w.title("Music player")
@@ -35,7 +35,8 @@ def pause():
 def resume():
     #if keyboard.is_pressed("Enter")
     pygame.mixer.music.unpause()
-
+def exit():
+    sys.exit()
 
 a1 = Button(w, text="Open file", command=open_file, width=10, height=2, font="None 12 bold") 
 a1.grid(row=1, column=0, padx=100)
